@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Returning to Creator Dashboard</title>
+</head>
+<body style="max-width:720px;margin:40px auto;padding:0 16px;font:16px/1.6 system-ui,sans-serif">
+<p>Returning to your dashboard… If nothing happens, make sure the dashboard is running (<code>npm start</code>) and <a id="go" href="#">click here</a>.</p>
+<script>
+  // Fixed target: the dashboard running on this computer. Only the query string is carried over.
+  var target = 'http://127.0.0.1:4270/auth/tiktok/callback/' + window.location.search;
+  document.getElementById('go').href = target;
+  window.location.replace(target);
+</script>
+</body>
+</html>
